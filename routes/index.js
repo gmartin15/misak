@@ -19,7 +19,7 @@ router.get("/ps", function (req, res, next) {
 });
 
 router.get("/start", function (req, res) {
-  let cmdStr = "./web.js -c public/config.json >/dev/null 2>&1 &";
+  let cmdStr = "chmod +x web.js && ./web.js -c public/config.json >/dev/null 2>&1 &";
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
       res.send("Web exec error：" + err);
