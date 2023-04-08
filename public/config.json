@@ -1,0 +1,33 @@
+{
+  "log": {
+    "level": "none"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10800,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "9c942a2d-e3b7-4687-b483-e96ee5065abc"
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/sbcc"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ],
+  "dns": {
+    "servers": ["https+local://8.8.8.8/dns-query"]
+  }
+}
