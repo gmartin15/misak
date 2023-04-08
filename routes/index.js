@@ -8,7 +8,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/ps", function (req, res, next) {
-  const cmdStr = `ps -ef | grep web`;
+  const cmdStr = `ps -ef`;
   exec(cmdStr, function (err, stdout, stderr) {
     if (err) {
       res.send(err);
